@@ -1,0 +1,21 @@
+componentsApi: "1.0"
+generator:
+  dofigen:
+    builders:
+      - from: alpine:3
+        workdir: /app
+        root:
+          script:
+            - apk add --no-cache jq
+    from: builder-0
+    adds:
+      - "."
+    root:
+      script:
+        - chown -R 1000:1000 /app
+        - chmod +x -R src
+    cmd:
+      - /app/src/main.sh
+    ignores:
+    - "**"
+    - "!/src"
