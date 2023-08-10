@@ -1,0 +1,12 @@
+{
+    "view": "counter",
+    "data": [
+        {
+            "_id":0,
+            "count":0
+        }
+    ],
+    "props":{
+        "text":"Mon counter"
+    }
+}

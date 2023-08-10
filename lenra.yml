@@ -6,7 +6,7 @@ generator:
         workdir: /app
         root:
           script:
-            - apk add --no-cache jq
+            - apk add --no-cache jq bash curl
     from: builder-0
     adds:
       - "."
