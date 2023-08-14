@@ -7,7 +7,7 @@ echo '{
     "children": [
       {
         "type": "view",
-        "name": "menu",
+        "name": "menu"
       },
       {
         "type": "view",

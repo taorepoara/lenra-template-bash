@@ -32,7 +32,7 @@ STD_IN=$(</dev/stdin)
 
 request="$STD_IN"
 
->&2 echo "Request: ${request}"
+# >&2 echo "Request: ${request}"
 
 if [ "$(echo "${request}" | jq '.view!=null')" == "true" ]; then
     view "$request"

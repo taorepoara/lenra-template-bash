@@ -1,4 +1,5 @@
 counter=$(echo "$data" | jq -r '.[0]')
+id=$(echo "$counter" | jq -r '._id')
 count=$(echo "$counter" | jq -r '.count')
 text=$(echo "$props" | jq -r '.text')
 message="$text: $count"
@@ -8,7 +9,7 @@ echo '{
     "children": [
         {
             "type": "text",
-            "value": "'"$message"'",
+            "value": "'"$message"'"
         },
         {
             "type": "button",
@@ -16,7 +17,7 @@ echo '{
             "onPressed": {
                 "action": "increment",
                 "props": {
-                    "id": 0
+                    "id": "'"$id"'"
                 }
             }
         }

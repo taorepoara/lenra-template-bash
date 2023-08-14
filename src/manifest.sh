@@ -3,8 +3,11 @@ echo '{
         "lenraRoutes": [
             {
                 "path": "/",
-                "view": "main"
+                "view": {
+                    "type": "view",
+                    "name": "main"
+                }
             }
         ]
-      }
+    }
 }'
